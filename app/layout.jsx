@@ -18,7 +18,7 @@ export default function Layout({ children }) {
 
                 <meta property="og:title" content="AD Vision - Votre partenaire créatif" />
                 <meta property="og:description" content="Chez AD Vision, nous organisons des événements mémorables, créons des publicités impactantes et développons des sites web." />
-                <meta property="og:image" content="/path/to/your/image.jpg" />
+                <meta property="og:image" content="favicon.ico" />
                 <meta property="og:url" content="https://ad-vision-pub.vercel.app/" />
                 <meta property="og:type" content="website" />
 
@@ -33,6 +33,9 @@ export default function Layout({ children }) {
                 <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
                 <link href="/styles/bootstrap.min.css" rel="stylesheet" />
                 <link href="/styles/styles.css" rel="stylesheet" />
+                
+                {/* Favicon */}
+                <link rel="icon" href="/favicon.ico" type="image/x-icon" />
             </head>
             <body>
                 <NavBar />
