@@ -5,11 +5,9 @@ import Galerie from "./components/galerie";
 import Service from "./components/service";
 import Coment from "./components/coment";
 
-
 export default function Home() {
     return (
         <>
-
             <div className="container-fluid bg-breadcrumb-home">
                 <div className="container text-center">
                     <div className="row g-5 align-items-center">
@@ -20,27 +18,23 @@ export default function Home() {
                                 <p className="mb-4 fs-5 d-none d-md-block text-white-50">
                                     Chez <span>AD Vision</span>, nous organisons des événements mémorables, créons des publicités impactantes, et développons des sites web. Faites confiance à notre expertise pour réaliser vos projets les plus ambitieux.
                                 </p>
-                                <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-start ">
+                                <div className="d-flex flex-column flex-md-row justify-content-center justify-content-md-start">
                                     <a className="btn btn-secondary rounded-pill text-white py-3 px-5 mb-2 mb-md-0 me-md-3 w-100" href="/services">Nos Services</a>
-                                    <a className="btn btn-primary rounded-pill text-white py-3 px-5 w-100 " href="/contact">Nous Contacter</a>
+                                    <a className="btn btn-primary rounded-pill text-white py-3 px-5 w-100" href="/contact">Nous Contacter</a>
                                 </div>
-
                             </div>
                         </div>
-                        <div className="col-12 col-md-5 d-none d-lg-block fadeInRight animated " data-animation="fadeInRight" data-delay="0.1s" style={{ animationDelay: '0.1s' }}>
-                            <div className=''>
+                        <div className="col-12 col-md-5 d-none d-lg-block fadeInRight animated" data-animation="fadeInRight" data-delay="0.1s" style={{ animationDelay: '0.1s' }}>
                             <FormContact />
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            {/*  */}
             <Feature />
             <About />
             <Service />
             <Galerie />
             <Coment />
         </>
-    )
+    );
 }

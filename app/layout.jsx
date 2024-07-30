@@ -4,7 +4,7 @@ import React from 'react';
 import Script from 'next/script'; // Importer le composant Script
 import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export default function Layout({ children }) {
     return (
@@ -14,32 +14,30 @@ export default function Layout({ children }) {
                 <meta name="description" content="Chez AD Vision, nous organisons des événements mémorables, créons des publicités impactantes, et développons des sites web. Faites confiance à notre expertise pour réaliser vos projets les plus ambitieux." />
                 <meta name="keywords" content="événements, publicités, développement web, AD Vision" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <link rel="canonical" href="https://www.votre-site.com/" />
-                
+                <link rel="canonical" href="https://ad-vision-pub.vercel.app/" />
+
+                <meta property="og:title" content="AD Vision - Votre partenaire créatif" />
+                <meta property="og:description" content="Chez AD Vision, nous organisons des événements mémorables, créons des publicités impactantes et développons des sites web." />
+                <meta property="og:image" content="/path/to/your/image.jpg" />
+                <meta property="og:url" content="https://ad-vision-pub.vercel.app/" />
+                <meta property="og:type" content="website" />
+
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
                 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:wght@300..800&display=swap" rel="stylesheet" />
 
-                {/* Icon Font Stylesheet */}
                 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
                 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-
-                {/* Libraries Stylesheet */}
                 <link href="/lib/animate/animate.min.css" rel="stylesheet" />
                 <link href="/lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
                 <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-
-                {/* Customized Bootstrap Stylesheet */}
                 <link href="/styles/bootstrap.min.css" rel="stylesheet" />
-
-                {/* Template Stylesheet */}
                 <link href="/styles/styles.css" rel="stylesheet" />
             </head>
             <body>
                 <NavBar />
                 {children}
 
-                {/* Footer Start */}
                 <footer className="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
                     <div className="w-100 d-flex justify-content-start container">
                         <a href="/">
@@ -57,11 +55,11 @@ export default function Layout({ children }) {
                                     </div>
                                     <div className="d-flex align-items-center">
                                         <i className="fas fa-envelope text-primary me-3"></i>
-                                        <p className="text-white mb-0">contact@advision.com</p>
+                                        <p className="text-white mb-0"><a href="mailto:contact@advision.com">contact@advision.com</a></p>
                                     </div>
                                     <div className="d-flex align-items-center">
                                         <i className="fa fa-phone-alt text-primary me-3"></i>
-                                        <p className="text-white mb-0">(+33) 1 23 45 67 89</p>
+                                        <p className="text-white mb-0"><a href="tel:+33123456789">(+33) 1 23 45 67 89</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -88,10 +86,8 @@ export default function Layout({ children }) {
                         </div>
                     </div>
                 </footer>
-                {/* Footer End */}
 
                 <div className="position-fixed bottom-0 end-0 m-3 d-flex flex-column align-items-end index-home">
-                    {/* Bouton WhatsApp */}
                     <a
                         className="btn btn-success btn-lg-square rounded-circle mb-2"
                         href="https://wa.me/212702970861"
@@ -101,13 +97,11 @@ export default function Layout({ children }) {
                     >
                         <i className="fab fa-whatsapp fa-2x text-white"></i>
                     </a>
-                    {/* Back to Top */}
                     <a href="#id" className="btn btn-primary btn-lg-square rounded-circle back-to-top">
                         <i className="fa fa-arrow-up"></i>
                     </a>
                 </div>
 
-                {/* JavaScript Libraries */}
                 <Script
                     src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"
                     strategy="beforeInteractive"
@@ -122,8 +116,6 @@ export default function Layout({ children }) {
                 <Script src="/lib/counterup/counterup.min.js" strategy="lazyOnload" />
                 <Script src="/lib/lightbox/js/lightbox.min.js" strategy="lazyOnload" />
                 <Script src="/lib/owlcarousel/owl.carousel.min.js" strategy="lazyOnload" />
-                
-                {/* Template Javascript */}
                 <Script src="/js/main.js" strategy="lazyOnload" />
             </body>
         </html>
